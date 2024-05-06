@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature_Converter</title>
+    <!-- Link CSS file  -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Link bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- to use : bootstrap icons (Attach CDN)  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+   
+    <div class="container-fluid">  <!-- container-fluid : 100% width at all breakpoints-->
+       
+        <!-- // Row to put all logic inside so that we put in at center inside container  -->
+        <div class="row converter">
+            <div class="col-10 col-sm-8 col-md-6 col-lg-6 col-xl-6 col-xxl-6 border border-primary">
+                 
+        <!-- row 1 -->
+        <div class="row title">
+            <div class="col-12 columns ">
+                <h2>Temperature Converter</h2>
+            </div>
+        </div>
+
+        <!-- row 2 -->
+        <div class="row">
+            <div class="col-12 columns">
+                <label for="fromUnit" class="label">From:</label>
+            </div>
+            <div class="col-12 columns">
+                <select id="fromUnit" class="w-100">  <!-- id same as for of label -->
+                    <option value="C">Celsius</option>  <!-- 1ST "C" is selected as we open this web-page-->
+                    <option value="K">Kelvin</option>
+                    <option value="F">Fahrenheit</option>
+                </select>
+            </div>
+
+            <div class="col-12 columns">
+                <label for="toUnit" class="label">To:</label>
+            </div>
+            <div class="col-12 columns">
+                <select id="toUnit" class="w-100">
+                    <option value="K">Kelvin</option>
+                    <option value="C">Celsius</option>
+                    <option value="F">Fahrenheit</option>
+                </select>
+            </div>
+        </div>
+        <!-- row 3 -->
+        <div class="row">
+            <div class="col-12 columns">
+                <label for="inputTemp" class="label">Temperature</label>
+            </div>
+            <div class="col-12 columns">
+                <input type="number" id="inputTemp" placeholder="Enter Temperature" class="w-100">
+            </div>
+        </div>
+
+        <!-- row 4  -->
+        <div class="row">
+            <div class="col-12 columns">
+                <button onclick="convert()" id="convert-btn" class="w-50">Convert</button> <!-- convert() : defined in js-->
+            </div>
+        </div>
+        <!-- row 5  -->
+        <div class="row">
+            <div class="col-12 columns">
+                <label for="result" class="label result-label">Result:</label>
+            </div>
+        </div>
+
+        <!-- row 5  -->
+            <div class="row">
+                <div class="col-12 columns">
+                    <input type="text" class="w-100" id="result" readonly>
+                    <!-- readonly attribute(boolean) -> do not allow to edit the converted temperature-->
+                </div>
+            </div>
+        
+            </div><!--Converter col-->
+        </div><!--Converter row-->
+
+    </div> <!-- container -->
+  
+
+
+    <!-- Bootstrap JS  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <!-- Link Js file  -->
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+
+.container-fluid{
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* main axis-> y-axis as flex-direction is column */
+    /* align-items: center; */
+
+    background-color: rgb(216, 216, 233);
+}
+
+.converter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title{
+    align-self: center;
+    text-wrap: nowrap;
+    display: block;
+
+    color:blue;
+}
+.title h2{
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+.converter .columns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label{
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+#toUnit, #fromUnit, #inputTemp{
+    font-size: 1.3rem;
+    font-weight: 400;
+    border: none;
+    outline: 0;
+}
+#convert-btn{
+    margin-top:15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border: none;
+    outline: 0;
+    background-color: blue;
+    color: #fff;
+}
+
+select{
+    background-color: rgb(202, 208, 209);
+}
+
+.result-label{
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+#result{
+    margin-top:15px;
+    margin-bottom:15px;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    outline: 0;
+    width: auto;
+}
+
+
+
+
+
+
+
+
+
+
+/* ----------------------------------------- Responsiveness ------------------------------  */
+@media (max-width:470px){
+    .title h2{
+        font-weight: 800;
+        font-size: 1.3rem;
+    }
+}
+
+
+@media (max-width:320px){
+    .title h2{
+        font-weight: 700;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width:250px){
+    .title h2{
+        font-weight: 650;
+        font-size: 1rem;
+    }
+}
